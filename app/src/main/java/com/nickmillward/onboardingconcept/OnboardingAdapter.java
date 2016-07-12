@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
  * Created by nmillward on 7/12/16.
  */
 public class OnboardingAdapter extends FragmentPagerAdapter {
-    
+
     public OnboardingAdapter(FragmentManager fm) {
         super(fm);
     }
