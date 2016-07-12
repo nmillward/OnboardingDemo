@@ -9,6 +9,6 @@ import android.view.View;
 public class OnboardingPageTransformer implements ViewPager.PageTransformer {
     @Override
     public void transformPage(View page, float position) {
-        
+
     }
 }
