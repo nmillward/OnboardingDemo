@@ -3,6 +3,7 @@ package com.nickmillward.onboardingconcept;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 
 public class OnboardingActivity extends AppCompatActivity {
@@ -59,4 +60,19 @@ public class OnboardingActivity extends AppCompatActivity {
             );
         }
     }
+
+    public void onNextButton(View view) {
+        pagePosition += 1;
+        viewPager.setCurrentItem(pagePosition, true);
+    }
+
+    public void onFinishButton(View view) {
+        //TODO: Send info to data layer
+        finish();
+    }
+
+    public void onCancelButton(View view) {
+        finish();
+    }
+
 }
