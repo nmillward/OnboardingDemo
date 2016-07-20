@@ -4,11 +4,15 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class OnboardingActivity extends AppCompatActivity {
 
     private int pagePosition = 0;
+    private ImageButton nextBtn;
+    private Button finishBtn;
     private ViewPager viewPager;
     private ImageView[] indicators;
     private ImageView indicator01, indicator02, indicator03;
@@ -18,6 +22,9 @@ public class OnboardingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        nextBtn = (ImageButton) findViewById(R.id.btn_next);
+        finishBtn = (Button) findViewById(R.id.btn_finish);
 
         indicator01 = (ImageView) findViewById(R.id.indicator_01);
         indicator02 = (ImageView) findViewById(R.id.indicator_02);
@@ -44,6 +51,9 @@ public class OnboardingActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 pagePosition = position;
                 updateIndicator(pagePosition);
+
+                nextBtn.setVisibility(position == 2 ? View.GONE : View.VISIBLE);
+                finishBtn.setVisibility(position == 2 ? View.VISIBLE : View.GONE);
             }
 
             @Override
