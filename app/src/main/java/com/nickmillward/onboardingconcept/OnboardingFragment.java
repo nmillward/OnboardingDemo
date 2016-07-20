@@ -36,6 +36,7 @@ public class OnboardingFragment extends Fragment {
 
         backgroundColor = getArguments().getInt(BACKGROUND_COLOR);
         page = getArguments().getInt(PAGE);
+
     }
 
     @Nullable
@@ -76,4 +77,5 @@ public class OnboardingFragment extends Fragment {
         View background = view.findViewById(R.id.onboarding_fragment_bg);
         background.setBackgroundColor(backgroundColor);
     }
+
 }
