@@ -78,4 +78,5 @@ public class OnboardingFragment extends Fragment {
         background.setBackgroundColor(backgroundColor);
     }
 
+
 }

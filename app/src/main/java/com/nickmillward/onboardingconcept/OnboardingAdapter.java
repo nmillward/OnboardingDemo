@@ -18,13 +18,13 @@ public class OnboardingAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return OnboardingFragment.newInstance(Color.parseColor(String.valueOf(R.color.lightBlue)), position);
+                return OnboardingFragment.newInstance(Color.parseColor("#03A9F4"), position);
             case 1:
-                return OnboardingFragment.newInstance(Color.parseColor(String.valueOf(R.color.cyan)), position);
+                return OnboardingFragment.newInstance(Color.parseColor("#00BCD4"), position);
             case 2:
-                return OnboardingFragment.newInstance(Color.parseColor(String.valueOf(R.color.teal)), position);
+                return OnboardingFragment.newInstance(Color.parseColor("#009688"), position);
             default:
-                return OnboardingFragment.newInstance(Color.parseColor(String.valueOf(R.color.lightBlue)), position);
+                return OnboardingFragment.newInstance(Color.parseColor("#03A9F4"), position);
         }
     }
 
