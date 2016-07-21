@@ -4,4 +4,6 @@
     android:layout_height="match_parent"
     android:id="@+id/onboarding_fragment_bg">
 
+    <!-- Card / e.g. Pokemon Card example -->
+
 </LinearLayout>

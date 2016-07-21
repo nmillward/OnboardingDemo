@@ -4,4 +4,6 @@
     android:layout_height="match_parent"
     android:id="@+id/onboarding_fragment_bg">
 
+    <!-- Objects placed in a circle / e.g. Yahoo News example -->
+
 </LinearLayout>
