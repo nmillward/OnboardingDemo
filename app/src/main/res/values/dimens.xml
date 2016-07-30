@@ -7,5 +7,6 @@
     <dimen name="half_general_margin">8dp</dimen>
     <dimen name="quarter_general_margin">4dp</dimen>
     <dimen name="double_general_margin">32dp</dimen>
+    <dimen name="triple_general_margin">48dp</dimen>
 
 </resources>

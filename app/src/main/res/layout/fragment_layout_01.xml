@@ -1,9 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboarding_fragment_bg"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/onboarding_fragment_bg">
+    android:gravity="center_horizontal"
+    android:padding="@dimen/double_general_margin"
+    tools:background="@color/transparentBlack">
 
     <!-- Menu / Form List Items -->
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tv_brightness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:textColor="@color/white"
+        android:text="BRIGHTNESS"/>
+
+    <SeekBar
+        android:id="@+id/sb_brightness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_brightness"
+        android:layout_marginTop="@dimen/general_margin"
+        android:max="100"
+        android:progress="75"/>
+
+    <TextView
+        android:id="@+id/tv_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sb_brightness"
+        android:layout_marginTop="@dimen/triple_general_margin"
+        android:textColor="@color/white"
+        android:text="SIZE"/>
+
+    <SeekBar
+        android:id="@+id/sb_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_size"
+        android:layout_marginTop="@dimen/general_margin"
+        android:max="100"
+        android:progress="45"/>
+
+    <TextView
+        android:id="@+id/tv_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sb_size"
+        android:layout_marginTop="@dimen/triple_general_margin"
+        android:textColor="@color/white"
+        android:text="BACKGROUND"/>
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switch_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sb_size"
+        android:layout_marginTop="@dimen/triple_general_margin"
+        android:layout_toRightOf="@id/tv_background"
+        android:layout_alignParentEnd="true"/>
+
+
+
+</RelativeLayout>
