@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class OnboardingActivity extends AppCompatActivity {
 
@@ -16,6 +17,8 @@ public class OnboardingActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private ImageView[] indicators;
     private ImageView indicator01, indicator02, indicator03;
+
+    public TextView tv_brightness;
 
 
     @Override
@@ -32,6 +35,8 @@ public class OnboardingActivity extends AppCompatActivity {
         indicators = new ImageView[] {indicator01, indicator02, indicator03};
 
         updateIndicator(pagePosition);
+
+        tv_brightness = (TextView) findViewById(R.id.tv_brightness);
 
         viewPager = (ViewPager) findViewById(R.id.onboarding_viewpager);
 
