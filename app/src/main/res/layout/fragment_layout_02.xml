@@ -1,9 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/onboarding_fragment_bg">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/onboarding_fragment_bg"
+    android:gravity="center_horizontal"
+    android:padding="@dimen/double_general_margin"
+    tools:background="@color/transparentBlack">
 
     <!-- Card / e.g. Pokemon Card example -->
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_profile_bg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/card">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="80dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:text="Nick Millward"/>
+
+        <TextView
+            android:id="@+id/tv_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/transparentBlack"
+            android:text="Android Developer"/>
+
+        <TextView
+            android:id="@+id/tv_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/transparentBlack"
+            android:paddingTop="@dimen/half_general_margin"
+            android:paddingBottom="@dimen/half_general_margin"
+            android:paddingRight="@dimen/double_general_margin"
+            android:paddingLeft="@dimen/double_general_margin"
+            android:textAlignment="center"
+            android:text="@string/lorem"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/general_margin"
+            android:background="@drawable/button"
+            android:textColor="@color/white"
+            android:text="+ Follow"/>
+
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/profile"
+        app:civ_border_width="3dp"
+        app:civ_border_color="#FFFFFFFF"/>
+
+</FrameLayout>
