@@ -5,5 +5,6 @@
     android:id="@+id/onboarding_fragment_bg">
 
     <!-- Objects placed in a circle / e.g. Yahoo News example -->
+    <!-- Or Yahoo Weather App w/ background image -->
 
 </LinearLayout>
