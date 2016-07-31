@@ -73,6 +73,17 @@
         android:layout_toRightOf="@id/tv_background"
         android:layout_alignParentEnd="true"/>
 
+    <CheckBox
+        android:id="@+id/cb_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switch_background"
+        android:layout_marginTop="@dimen/double_general_margin"
+        android:layout_centerHorizontal="true"
+        android:buttonTint="@color/white"
+        android:textColor="@color/white"
+        android:text="SAVE CHANGES" />
+
 
 
 </RelativeLayout>
