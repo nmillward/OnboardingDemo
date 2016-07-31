@@ -3,7 +3,6 @@ package com.nickmillward.onboardingconcept;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 /**
  * Created by nmillward on 7/12/16.
@@ -35,7 +34,10 @@ public class OnboardingPageTransformer implements ViewPager.PageTransformer {
             // Page is currently being swiped -- perform animations here
 
             // Fragment 1 -- Settings
-            final TextView tv_brightness = (TextView) page.findViewById(R.id.tv_brightness);
+            final View tv_settings_title = page.findViewById(R.id.tv_settings_title);
+            if (tv_settings_title != null) tv_settings_title.setAlpha(1.0f - absPosition * 2);
+
+            final View tv_brightness = page.findViewById(R.id.tv_brightness);
             if (tv_brightness != null) tv_brightness.setTranslationX(pageWidthTimesPosition * 0.5f);
 
             final View sb_brightness = page.findViewById(R.id.sb_brightness);
@@ -55,6 +57,9 @@ public class OnboardingPageTransformer implements ViewPager.PageTransformer {
 
 
             // Fragment 2 -- Social Card
+            final View tv_profile_title = page.findViewById(R.id.tv_social_card_title);
+            if (tv_profile_title != null) tv_profile_title.setAlpha(1.0f - absPosition * 2);
+
             final ImageView profile = (ImageView) page.findViewById(R.id.iv_profile);
             if (profile != null) profile.setTranslationX(pageWidthTimesPosition * 1.2f);
 
