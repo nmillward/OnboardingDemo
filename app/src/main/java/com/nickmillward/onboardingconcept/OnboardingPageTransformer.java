@@ -59,19 +59,28 @@ public class OnboardingPageTransformer implements ViewPager.PageTransformer {
             final View switch_background = page.findViewById(R.id.switch_background);
             if (switch_background != null) switch_background.setTranslationX(pageWidthTimesPosition * 0.9f);
 
+            final View cb_save = page.findViewById(R.id.cb_save);
+            if (cb_save != null) cb_save.setTranslationX(pageWidthTimesPosition * 0.3f);
+
 
             // Fragment 2 -- Social Card
             final View tv_profile_title = page.findViewById(R.id.tv_social_card_title);
             if (tv_profile_title != null) tv_profile_title.setAlpha(1.0f - absPosition * 2);
 
-//            final ImageView profile = (ImageView) page.findViewById(R.id.iv_profile);
-//            if (profile != null) profile.setTranslationX(pageWidthTimesPosition * 1.2f);
+            final ImageView profile = (ImageView) page.findViewById(R.id.iv_profile);
+            if (profile != null) profile.setTranslationX(pageWidthTimesPosition * 1.2f);
 
             final View card = page.findViewById(R.id.ll_profile_bg);
             if (card != null) card.setTranslationX(pageWidthTimesPosition * 0.7f);
 
             final View button = page.findViewById(R.id.btn_follow);
             if (button != null) button.setTranslationX(pageWidthTimesPosition * 0.2f);
+
+
+            // Fragment 3 -- Feature
+//            if (profile != null) profile.setScaleX(1.0f - absPosition * 2);
+//            if (profile != null) profile.setScaleY(1.0f - absPosition * 2);
+//            if (profile != null) profile.setAlpha(1.0f - absPosition * 2);
 
         }
 
@@ -83,8 +92,8 @@ public class OnboardingPageTransformer implements ViewPager.PageTransformer {
 
             scaleUp.setInterpolator(new FastOutSlowInInterpolator());
 
-            final ImageView profile = (ImageView) page.findViewById(R.id.iv_profile);
-            if (profile != null) profile.startAnimation(scaleUp);
+//            final ImageView profile = (ImageView) page.findViewById(R.id.iv_profile);
+//            if (profile != null) profile.startAnimation(scaleUp);
 
         }
 //        else if (position < 0) {

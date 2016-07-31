@@ -1,10 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/onboarding_fragment_bg">
+    android:id="@+id/onboarding_fragment_bg"
+    android:padding="@dimen/double_general_margin"
+    tools:background="@color/transparentBlack">
 
     <!-- Objects placed in a circle / e.g. Yahoo News example -->
     <!-- Or Yahoo Weather App w/ background image -->
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tv_feature_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:text="FEATURE EXAMPLE"/>
+
+    <ImageView
+        android:id="@+id/iv_bike"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_above="@+id/iv_bike_shadow"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/general_margin"
+        android:src="@drawable/ic_directions_bike_white_48px"/>
+
+    <ImageView
+        android:id="@+id/iv_bike_shadow"
+        android:layout_width="80dp"
+        android:layout_height="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/tv_bike_title"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/shadow"/>
+
+    <TextView
+        android:id="@+id/tv_bike_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_bike_desc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/general_margin"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:text="BIKE ROUTES"/>
+
+    <TextView
+        android:id="@+id/tv_bike_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="64dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:text="@string/lorem"/>
+
+
+</RelativeLayout>
