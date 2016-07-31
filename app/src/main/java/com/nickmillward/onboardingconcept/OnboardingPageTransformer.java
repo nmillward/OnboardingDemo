@@ -19,9 +19,6 @@ public class OnboardingPageTransformer implements ViewPager.PageTransformer {
         float pageWidthTimesPosition = pageWidth * position;
         float absPosition = Math.abs(position);
 
-        // Scale & Overshoot Animation
-        final long durcation = 800;
-
         if (position <= -1.0f || position >= 1.0f) {
 
             // Page is not visible -- stop any running animations

@@ -7,9 +7,6 @@
     android:padding="@dimen/double_general_margin"
     tools:background="@color/transparentBlack">
 
-    <!-- Objects placed in a circle / e.g. Yahoo News example -->
-    <!-- Or Yahoo Weather App w/ background image -->
-
     <TextView
         android:id="@+id/tv_feature_title"
         android:layout_width="wrap_content"

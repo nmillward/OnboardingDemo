@@ -18,8 +18,6 @@
         android:textColor="@color/white"
         android:text="PROFILE CARD EXAMPLE"/>
 
-    <!-- Card / e.g. Pokemon Card example -->
-
     <LinearLayout
         android:id="@+id/ll_profile_bg"
         android:orientation="vertical"

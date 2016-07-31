@@ -18,8 +18,6 @@
         android:textColor="@color/white"
         android:text="SETTINGS EXAMPLE"/>
 
-    <!-- Menu / Form List Items -->
-
     <TextView
         android:id="@+id/tv_brightness"
         android:layout_width="wrap_content"
