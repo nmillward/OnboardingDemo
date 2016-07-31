@@ -9,6 +9,15 @@
     android:padding="@dimen/double_general_margin"
     tools:background="@color/transparentBlack">
 
+    <TextView
+        android:id="@+id/tv_social_card_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:text="PROFILE CARD EXAMPLE"/>
+
     <!-- Card / e.g. Pokemon Card example -->
 
     <LinearLayout

@@ -42,10 +42,10 @@ public class OnboardingPageTransformer implements ViewPager.PageTransformer {
             if (sb_brightness != null) sb_brightness.setTranslationX(pageWidthTimesPosition * 0.5f);
 
             final View tv_size = page.findViewById(R.id.tv_size);
-            if (tv_size != null) tv_size.setTranslationX(pageWidthTimesPosition * 0.7f);
+            if (tv_size != null) tv_size.setTranslationX(pageWidthTimesPosition * 1.2f);
 
             final View sb_size = page.findViewById(R.id.sb_size);
-            if (sb_size != null) sb_size.setTranslationX(pageWidthTimesPosition * 0.7f);
+            if (sb_size != null) sb_size.setTranslationX(pageWidthTimesPosition * 1.2f);
 
             final View tv_background = page.findViewById(R.id.tv_background);
             if (tv_background != null) tv_background.setTranslationX(pageWidthTimesPosition * 0.9f);

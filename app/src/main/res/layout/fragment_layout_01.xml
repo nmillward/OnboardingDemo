@@ -5,8 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:padding="@dimen/double_general_margin"
+    android:padding="@dimen/triple_general_margin"
     tools:background="@color/transparentBlack">
+
+    <TextView
+        android:id="@+id/tv_settings_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:text="SETTINGS EXAMPLE"/>
 
     <!-- Menu / Form List Items -->
 
