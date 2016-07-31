@@ -1,15 +1,16 @@
 package com.nickmillward.onboardingconcept;
 
 import android.support.v4.view.ViewPager;
+import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 
 /**
  * Created by nmillward on 7/12/16.
  */
 public class OnboardingPageTransformer implements ViewPager.PageTransformer {
-
-//    TextView tv_brightness;
 
     @Override
     public void transformPage(View page, float position) {
@@ -20,6 +21,9 @@ public class OnboardingPageTransformer implements ViewPager.PageTransformer {
         int pageWidth = (int) page.getWidth();
         float pageWidthTimesPosition = pageWidth * position;
         float absPosition = Math.abs(position);
+
+        // Scale & Overshoot Animation
+        final long durcation = 800;
 
         if (position <= -1.0f || position >= 1.0f) {
 
@@ -60,8 +64,8 @@ public class OnboardingPageTransformer implements ViewPager.PageTransformer {
             final View tv_profile_title = page.findViewById(R.id.tv_social_card_title);
             if (tv_profile_title != null) tv_profile_title.setAlpha(1.0f - absPosition * 2);
 
-            final ImageView profile = (ImageView) page.findViewById(R.id.iv_profile);
-            if (profile != null) profile.setTranslationX(pageWidthTimesPosition * 1.2f);
+//            final ImageView profile = (ImageView) page.findViewById(R.id.iv_profile);
+//            if (profile != null) profile.setTranslationX(pageWidthTimesPosition * 1.2f);
 
             final View card = page.findViewById(R.id.ll_profile_bg);
             if (card != null) card.setTranslationX(pageWidthTimesPosition * 0.7f);
@@ -70,6 +74,31 @@ public class OnboardingPageTransformer implements ViewPager.PageTransformer {
             if (button != null) button.setTranslationX(pageWidthTimesPosition * 0.2f);
 
         }
+
+        if (position > 0 || position < 0) {
+            ScaleAnimation scaleUp = new ScaleAnimation(0, 1.0f, 0, 1.0f,
+                    Animation.RELATIVE_TO_SELF, 0.5f,
+                    Animation.RELATIVE_TO_SELF, 0.5f);
+            scaleUp.setDuration(durcation);
+
+            scaleUp.setInterpolator(new FastOutSlowInInterpolator());
+
+            final ImageView profile = (ImageView) page.findViewById(R.id.iv_profile);
+            if (profile != null) profile.startAnimation(scaleUp);
+
+        }
+//        else if (position < 0) {
+//            ScaleAnimation scaleDown = new ScaleAnimation(1.0f, 0, 1.0f, 0,
+//                    Animation.RELATIVE_TO_SELF, 0.5f,
+//                    Animation.RELATIVE_TO_SELF, 0.5f);
+//            scaleDown.setDuration(durcation);
+//
+//            scaleDown.setInterpolator(new FastOutLinearInInterpolator());
+//
+//            final ImageView profile = (ImageView) page.findViewById(R.id.iv_profile);
+//            if (profile != null) profile.startAnimation(scaleDown);
+//
+//        }
 
     }
 }
