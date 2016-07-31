@@ -1,10 +1,7 @@
 package com.nickmillward.onboardingconcept;
 
 import android.support.v4.view.ViewPager;
-import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 
 /**
@@ -96,31 +93,5 @@ public class OnboardingPageTransformer implements ViewPager.PageTransformer {
             }
 
         }
-
-        if (position > 0 || position < 0) {
-            ScaleAnimation scaleUp = new ScaleAnimation(0, 1.0f, 0, 1.0f,
-                    Animation.RELATIVE_TO_SELF, 0.5f,
-                    Animation.RELATIVE_TO_SELF, 0.5f);
-            scaleUp.setDuration(durcation);
-
-            scaleUp.setInterpolator(new FastOutSlowInInterpolator());
-
-//            final ImageView profile = (ImageView) page.findViewById(R.id.iv_profile);
-//            if (profile != null) profile.startAnimation(scaleUp);
-
-        }
-//        else if (position < 0) {
-//            ScaleAnimation scaleDown = new ScaleAnimation(1.0f, 0, 1.0f, 0,
-//                    Animation.RELATIVE_TO_SELF, 0.5f,
-//                    Animation.RELATIVE_TO_SELF, 0.5f);
-//            scaleDown.setDuration(durcation);
-//
-//            scaleDown.setInterpolator(new FastOutLinearInInterpolator());
-//
-//            final ImageView profile = (ImageView) page.findViewById(R.id.iv_profile);
-//            if (profile != null) profile.startAnimation(scaleDown);
-//
-//        }
-
     }
 }
