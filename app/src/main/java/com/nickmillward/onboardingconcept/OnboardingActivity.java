@@ -1,6 +1,8 @@
 package com.nickmillward.onboardingconcept;
 
+import android.animation.ArgbEvaluator;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -36,6 +38,13 @@ public class OnboardingActivity extends AppCompatActivity {
 
         updateIndicator(pagePosition);
 
+        final int pageColor01 = ContextCompat.getColor(this, R.color.lightBlue);
+        final int pageColor02 = ContextCompat.getColor(this, R.color.cyan);
+        final int pageColor03 = ContextCompat.getColor(this, R.color.teal);
+        final int[] pageColorList = new int[] {pageColor01, pageColor02, pageColor03};
+
+        final ArgbEvaluator argbEvaluator = new ArgbEvaluator();  //used to update the page color
+
         tv_brightness = (TextView) findViewById(R.id.tv_brightness);
 
         viewPager = (ViewPager) findViewById(R.id.onboarding_viewpager);
@@ -49,12 +58,34 @@ public class OnboardingActivity extends AppCompatActivity {
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+                // Update Page Background Color
+                int pageColorUpdate = (Integer) argbEvaluator.evaluate(
+                        positionOffset,
+                        pageColorList[position],
+                        pageColorList[position == 2 ? position : position + 1]  //If there's no last page, do not increment
+                );
+                viewPager.setBackgroundColor(pageColorUpdate);
+
             }
 
             @Override
             public void onPageSelected(int position) {
                 pagePosition = position;
                 updateIndicator(pagePosition);
+
+                //set the page color when selected
+                switch (position) {
+                    case 0:
+                        viewPager.setBackgroundColor(pageColor01);
+                        break;
+                    case 1:
+                        viewPager.setBackgroundColor(pageColor02);
+                        break;
+                    case 2:
+                        viewPager.setBackgroundColor(pageColor03);
+                        break;
+                }
 
                 nextBtn.setVisibility(position == 2 ? View.GONE : View.VISIBLE);
                 finishBtn.setVisibility(position == 2 ? View.VISIBLE : View.GONE);

@@ -1,6 +1,5 @@
 package com.nickmillward.onboardingconcept;
 
-import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -18,13 +17,13 @@ public class OnboardingAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return OnboardingFragment.newInstance(Color.parseColor("#03A9F4"), position);
+                return OnboardingFragment.newInstance(position);
             case 1:
-                return OnboardingFragment.newInstance(Color.parseColor("#00BCD4"), position);
+                return OnboardingFragment.newInstance(position);
             case 2:
-                return OnboardingFragment.newInstance(Color.parseColor("#009688"), position);
+                return OnboardingFragment.newInstance(position);
             default:
-                return OnboardingFragment.newInstance(Color.parseColor("#03A9F4"), position);
+                return OnboardingFragment.newInstance(position);
         }
     }
 

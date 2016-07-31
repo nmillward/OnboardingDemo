@@ -18,11 +18,10 @@ public class OnboardingFragment extends Fragment {
     private int backgroundColor;
     private int page;
 
-    public static OnboardingFragment newInstance(int backgroundColor, int page) {
+    public static OnboardingFragment newInstance(int page) {
         OnboardingFragment fragment = new OnboardingFragment();
 
         Bundle b = new Bundle();
-        b.putInt(BACKGROUND_COLOR, backgroundColor);
         b.putInt(PAGE, page);
 
         fragment.setArguments(b);
