@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OnboardingConcept</string>
 
-    <string name="btn_cancel">Cancel</string>
+    <string name="btn_skip">Skip</string>
     <string name="btn_finish">finish</string>
 
     <string name="lorem">Bacon ipsum dolor amet pancetta flank chicken, picanha ham ham hock boudin rump fatback chuck hamburger shank swine. </string>
